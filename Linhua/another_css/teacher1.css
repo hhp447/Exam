@@ -1,0 +1,14 @@
+body{
+	font-family: "微软雅黑";
+}
+a{
+	font-size: 18px;
+}
+/*顶部导航栏*/
+.top_nav{
+	margin-top: 10px;
+}
+/*翻页*/
+.page{
+	text-align: center;
+}

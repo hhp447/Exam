@@ -1,0 +1,170 @@
+body{
+	font-family: "微软雅黑";
+}
+a{
+	font-size: 18px;
+}
+/*顶部导航栏*/
+.top_nav{
+	margin-top: 10px;
+}
+/*用户头像和姓名*/
+.row_one{
+	margin-top: 40px;
+	text-align: center;
+}
+.left_area{
+	height: 200px;
+}
+.info img{
+	width: 150px;
+	height: 150px;
+	border-radius: 80px;
+}
+.right_area{
+	height: 200px;
+	background: url(../image/1.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+/*end*/
+
+/*教师实验操作*/
+.teacher_nav{
+	margin-top: 20px;
+}
+/*实验序号*/
+.expe{
+	height: 200px;
+	background-color: snow;
+	text-align: center;
+	border-radius: 10px;
+	padding: 20px;
+}
+.pagination{
+	float: right;
+}
+.more_experiment{
+	float: right;
+}
+/*翻页*/
+.page_turn{
+	text-align: center;
+}
+/*底部部分*/
+.breadcrumb{
+	width: 40%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	margin-top: 20px;
+}
+.searching{
+	width: 20%;
+	float: right;
+}
+.jumbotron{
+	width: 80%;
+	margin: 0 auto;
+}
+.pagination{
+	position: relative;
+	right: 500px;
+}
+
+/*教师发布实验*/
+.content_select{
+	/*height: 400px;*/
+	width: 90%;
+	border: 1px solid silver;
+	border-radius: 10px;
+	margin: 0 auto;
+}
+.content_select_container{
+	width: 50%;
+	margin: 0 auto;
+}
+select{
+	margin-left: 40px;
+}
+.select_special{
+	margin-left: 12px;
+}
+.content_select button{
+	background-color: seashell;
+}
+.content_select button:hover{
+	background-color: bisque;
+}
+.number{
+	width: 8%;
+}
+.questions_contents{
+	border: 1px solid silver;
+	padding: 8px;
+	display: none;
+}
+.questions_contents input{
+	width: 80px;
+}
+.answer_info{
+	float: right;
+}
+.content_select_container .look_pick_questions{
+	text-decoration: none;	
+	font-size: 15px;
+	padding: 2px;
+	color: black;
+	border: 1px solid silver;
+	border-radius: 3px;
+}
+.content_select_container .look_pick_questions:hover{
+	background-color: bisque;
+}
+
+#ok_5:hover{
+	background-color: skyblue;
+}
+
+#ok_1{
+	width: 100%;
+	border: 1px solid silver;
+	margin-top: 5px;
+}
+#ok_2{
+	width: 100%;
+	border: 1px solid silver;
+	margin-top: 5px;
+}
+#ok_3{
+	width: 100%;
+	border: 1px solid silver;
+	margin-top: 5px;
+}
+#ok_4{
+	width: 100%;
+	border: 1px solid silver;
+	margin-top: 5px;
+}
+
+#ok_1:hover{
+	background-color: skyblue;
+}
+#ok_2:hover{
+	background-color: skyblue;
+}
+
+#ok_3:hover{
+	background-color: skyblue;
+}
+
+#ok_4:hover{
+	background-color: skyblue;
+}
+
+
+
+
+
+
+

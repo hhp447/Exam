@@ -1,0 +1,175 @@
+<?php /* Smarty version 2.6.25-dev, created on 2016-12-20 13:29:30
+         compiled from exam.html */ ?>
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>试题</title>
+		<link rel="stylesheet" href="./bootstrap-3.3.5-dist/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="./another_css/exam.css" />
+		<link rel="stylesheet" type="text/css" href="./another_css/student1.css" />
+		<link rel="stylesheet" type="text/css" href="./Font-Awesome-3.2.1/css/font-awesome.css" />
+		<link rel="stylesheet" href="./bootstrap-3.3.5-dist/css/bootstrap.css" />
+		<script src="./bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+		<script src="./bootstrap-3.3.5-dist/jquery-2.1.4.min.js"></script>
+		<script>
+			$(function() {
+				$('#editControls a').click(function(e) {
+					switch($(this).data('role')) {
+						case 'h1':
+						case 'h2':
+						case 'p':
+							document.execCommand('formatBlock', false, '<' + $(this).data('role') + '>');
+							break;
+						default:
+							document.execCommand($(this).data('role'), false, null);
+							break;
+					}
+
+				})
+			});
+		</script>
+			<link rel="stylesheet" href="../../kindeditor-4.1.7/themes/default/default.css" />
+	<link rel="stylesheet" href="../../kindeditor-4.1.7/plugins/code/prettify.css" />
+	<script charset="utf-8" src="../../kindeditor-4.1.7/kindeditor.js"></script>
+	<script charset="utf-8" src="../../kindeditor-4.1.7/lang/zh_CN.js"></script>
+	<script charset="utf-8" src="../../kindeditor-4.1.7/plugins/code/prettify.js"></script>
+	 <script>
+		KindEditor.ready(function(K) {
+			var editor1 = K.create('textarea[name="code"]', {
+				cssPath : '../../kindeditor-4.1.7/plugins/code/prettify.css',
+				uploadJson : '../../kindeditor-4.1.7/php/upload_json.php',
+				fileManagerJson : '../../kindeditor-4.1.7/php/file_manager_json.php',
+				allowFileManager : true,
+				afterCreate : function() {
+					var self = this;
+					K.ctrl(document, 13, function() {
+						self.sync();
+						K('form[name=example]')[0].submit();
+					});
+					K.ctrl(self.edit.doc, 13, function() {
+						self.sync();
+						K('form[name=example]')[0].submit();
+					});
+				}
+			});
+			prettyPrint();
+		});
+	</script>
+	<script>
+	$(document).ready(function(){
+		$("#tijiao").click(function(){
+			var bian_num = $("#bian_num").val();
+			var arr=[];var bian_id=[];
+			for(var j=0;j<bian_num;j++){
+				arr.push(eval("$(document.getElementsByTagName('iframe')["+j+"].contentWindow.document.body).html()"));//获取kindeditor  textarea中的值
+			}
+			/*$('textarea[name="code"]').each(function(){
+				arr.push($(this).val());
+				})*/
+			$('input[name="bian_id"]').each(function(){
+				bian_id.push($(this).val());
+				})
+			var xuan = "";var tian=0;var cheng=0;
+			var xuan_answer = $("#xuan_answer").val();
+			var num = $('#num').val();
+			var tian_num = $('#tian_num').val();
+			var cheng_num = $('#cheng_num').val();
+			for(var j=1;j<=num;j++){
+				$('input[name=xuan_'+j+']:checked').each(function(){xuan+=$(this).val();});
+			}
+			
+			for(var j=1;j<=tian_num;j++){
+				if($("#tian_"+j).val()==$("#tian_"+j+"-answer").val()){
+					tian+=5;
+				}
+			}
+			for(var j=1;j<=cheng_num;j++){
+				if($("#cheng_"+j).val()==$("#cheng_"+j+"-answer").val()){
+					cheng+=10;
+				}
+			}	
+			$.post("defen.php",{xuan_answer:xuan_answer,xuan:xuan,tian:tian,cheng:cheng,ex_id:<?php echo ($this->_tpl_vars['ex_id']); ?>
+,number:"<?php echo $this->_tpl_vars['number']; ?>
+",bian_id:bian_id,arr:arr},function(data){
+				alert(data);
+				window.location.href="student.php?number=<?php echo $this->_tpl_vars['number']; ?>
+&name=<?php echo $this->_tpl_vars['stu_name']; ?>
+";
+			});
+
+		});
+	})
+
+	</script>
+	</head>
+
+	<body>
+
+		<nav id="heading" class="navbar-default navbar-fixed-top">
+			<a href="student.php?number=<?php echo $this->_tpl_vars['number']; ?>
+&name=<?php echo $this->_tpl_vars['stu_name']; ?>
+">
+				<span class="glyphicon glyphicon-home"></span>
+			</a>
+		</nav>
+		<br /><br />
+		<h2 align="center"><?php echo $this->_tpl_vars['ex_name']; ?>
+</h2>
+		<div class="container">
+
+
+
+			<!--单项选择题-->
+			<div class="container_unit">
+				<strong><h4>一、单项选择题</h4><strong>
+				<?php echo $this->_tpl_vars['exam']['xuan']; ?>
+
+			</div>
+
+
+
+
+
+			
+			<!--填空题-->
+			<div class="container_unit">
+				<strong><h4>二、填空题</h4><strong>
+				<?php echo $this->_tpl_vars['exam']['tian']; ?>
+
+			</div>
+
+
+
+
+
+			<!--程序运行结果题-->
+			<div class="container_unit">
+				<strong><h4>三、程序运行结果题</h4><strong>
+					<?php echo $this->_tpl_vars['exam']['cheng']; ?>
+
+			</div>
+
+
+
+
+
+
+			<!--编程题-->
+			<div class="container_unit">
+				<strong><h4>四、编程题</h4><strong>
+				<?php echo $this->_tpl_vars['exam']['bian']; ?>
+
+			</div>
+
+
+
+
+		
+		<button class="tijiao" id='tijiao'>提交</button>
+		</div>
+
+	</body>
+
+</html>

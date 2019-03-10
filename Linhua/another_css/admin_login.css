@@ -1,0 +1,19 @@
+body{
+	font-family: "微软雅黑";
+	background: url(../image/25.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.container{
+	width: 20%;
+	margin: 200px auto auto auto;
+	text-align: center;
+}
+h2{
+	color: white;
+}
+.rem_pwd{
+	color: black;
+	float: right;
+	font-weight: bolder;
+}

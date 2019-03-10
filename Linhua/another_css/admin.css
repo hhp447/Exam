@@ -1,0 +1,60 @@
+body{
+	font-family: "微软雅黑";
+}
+nav{
+	font-size: 18px;
+}
+.tab-content{
+	font-size: 18px;
+}
+.tab-content table{
+	font-size: 14px;
+}
+.col-md-2{
+	height: 600px;
+	background: url(../image/7.jpg);
+	padding-top: 20px;
+	background-repeat: no-repeat;
+	background-position-x: -50px;
+	opacity: 0.8;
+	border-radius: 8px;
+	text-align: center;
+}
+.row .col-md-2{
+	color: white;
+}
+.col-md-2 a{
+	color: white;
+}
+.col-md-2 a:hover{
+	color: black;
+}
+small{
+	float: right;
+}
+span{
+	color: red;
+}
+/*翻页调整*/
+.pagination{
+	float: right;
+}
+.input-group{
+	margin-left: 120px;
+}
+.input-group .job{
+	margin-left: 230px;
+}
+.job input{
+	margin-left: 45px;
+}
+.input-group a{
+	margin-left: 70px;
+}
+.input-group{
+	width: 70%;
+}
+#submit{
+	margin-left: 70px;
+	width: 70%;
+}

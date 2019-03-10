@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="name" content="width=device-width,initial-scale=1"/>
+		<title>查看提交实验内容</title>
+		<link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.css" />
+		<link rel="stylesheet" href="another_css/teacher2.css" />
+		<script type="text/javascript">
+			function xiugai () {
+				var xg=document.getElementById("modify");
+				modify.hidden=false;
+				var btn=document.getElementById("btn");
+				btn.style.display="inline";
+				var grace=document.getElementById("grace");
+				grace.style.display="inline";
+			}
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<!--顶部导航栏-->
+			<ul class="nav nav-pills top_nav">
+				<li>
+					<a href="teacher.php?name=<{!$name!}>&number=<{!$number!}>"><span class="glyphicon glyphicon-home">主页</span></a>
+				</li>
+				<li><a href="./main.php"><span class="glyphicon glyphicon-off">退出</span></a></li>
+			</ul>
+			<hr />
+			<!--学生提交实验内容-->
+			<div class="jumbotron">
+				<p>
+					<a href="#" onclick="xiugai()" title="修改和批注"><span class="glyphicon glyphicon-pencil"></span></a>			
+					<!-- <a href="teacher.html"><span class="glyphicon glyphicon-ok right"></span></a> -->			
+					
+				</p>
+				<!--这里显示学生提交的代码块-->
+				
+				<div width="300">
+					<{!foreach from=$ques_code key=question item=code!}>	
+					<code><{!$question!}>
+					</code>
+					<br/><{!$code!}><br/>
+					<{!/foreach!}>
+					</div>		
+				<hr />
+				<form action="./teacher2.php?id=<{!$id!}>&number=<{!$number!}>&name=<{!$name!}>&number2=<{!$number2!}>" method="POST">
+				<textarea id="modify" cols="100%" rows="10" hidden="hidden" name="opinion">批注或意见...</textarea>
+				<hr/>
+				<!-- <select id="grace" style="display: none;" name="select">
+					<option>优</option>
+					<option>良</option>
+					<option>中</option>
+					<option>及格</option>
+					<option>不及格</option>
+				</select> -->
+				<input type="text" name="select" id="grace" style="display: none;" placeholder="输入您的总分数">
+				&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="hidden" name="teacher" value='<{!$name!}>' >
+				<input type="submit" name="submit" value="确认提交" id="btn" style="display: none;">
+				</form>
+			</div>
+			
+		</div>
+	</body>
+</html>

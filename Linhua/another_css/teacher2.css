@@ -1,0 +1,27 @@
+body{
+	font-family: "微软雅黑";
+}
+a{
+	font-size: 18px;
+}
+/*顶部导航栏*/
+.top_nav{
+	margin-top: 10px;
+}
+/*学生提交实验内容*/
+.jumbotron{
+	width: 80%;
+	margin: 0 auto;
+}
+/*右边组件*/
+.right{
+	float: right;
+}
+#modify{
+	margin: 0 auto;
+}
+code{
+	word-wrap: break-word;
+	word-break: break-all;
+	overflow: hidden;
+}

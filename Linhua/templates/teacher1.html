@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="name" content="width=device-width,initial-scale=1"/>
+		<title>批改实验</title>
+		<link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.css" />
+		<link rel="stylesheet" href="another_css/teacher1.css" />
+		<script type="text/javascript" src="bootstrap-3.3.5-dist/js/feny.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<!--顶部导航栏-->
+			<ul class="nav nav-pills top_nav">
+				<li>
+					<a href="teacher.php?number=<{!$number!}>&name=<{!$name!}>"><span class="glyphicon glyphicon-home">主页</span></a>
+				</li>
+				<li><a href="./main.php"><span class="glyphicon glyphicon-off">退出</span></a></li>
+			</ul>
+			<hr />
+			<!--统计实验人数-->
+			
+			<!--主要内容-->
+			<div id="result">
+			
+			<script>
+			 dopage('result' ,'teacher1_ajax.php?id=<{!$id!}>&name=<{!$name!}>&number=<{!$number!}>')
+			</script>
+			</div>
+			
+			
+			<hr />
+		</div>
+	</body>
+</html>

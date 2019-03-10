@@ -1,0 +1,74 @@
+body{
+	font-family: "微软雅黑";
+/*	background-color: snow;*/
+}
+a{
+	font-size: 18px;
+}
+/*顶部导航栏*/
+.top_nav{
+	margin-top: 10px;
+}
+/*用户头像和姓名*/
+.row_one{
+	margin-top: 40px;
+	text-align: center;
+}
+.left_area{
+	height: 200px;
+}
+.info img{
+	width: 150px;
+	height: 150px;
+	border-radius: 80px;
+}
+.right_area{
+	height: 200px;
+	background: url(../image/1.png);
+	background-repeat: no-repeat;
+	background-size: cover;;
+	border-radius: 10px;
+}
+/*end*/
+
+/*学生实验操作*/
+.teacher_nav{
+	margin-top: 20px;
+}
+/*实验序号*/
+.expe{
+	height: 200px;
+	background-color: snow;
+	text-align: center;
+	border-radius: 10px;
+	padding: 20px;
+}
+.pagination{
+	float: right;
+}
+.more_experiment{
+	float: right;
+}
+/*翻页*/
+.page_turn{
+	text-align: center;
+}
+/*底部部分*/
+.breadcrumb{
+	width: 40%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	margin-top: 50px;
+}
+#two{
+	text-align: center;
+}
+.select_ex{
+	float: right;
+}
+.pagination{
+	position: relative;
+	right: 500px;
+}
+

@@ -1,0 +1,42 @@
+body{
+	font-family: "微软雅黑";
+}
+a{
+	font-size: 18px;
+}
+/*顶部导航栏*/
+.top_nav{
+	margin-top: 10px;
+}
+/*left*/
+.left{
+	height: 200px;
+	text-align: center;
+	border: 1px solid snow;
+}
+.left img{
+	width: 150px;
+	height: 150px;
+	border-radius: 100px;
+}
+#one{
+	padding-left: 50px;
+	padding-top: 50px;
+}
+/*right*/
+.right{
+	border: 1px solid snow;
+}
+li{
+	list-style: none;	
+}
+#two{
+	width: 50%;
+	padding-left: 50px;
+	padding-top: 50px;
+}
+#three{
+	width: 50%;
+	padding-left: 50px;
+	padding-top: 50px;
+}
